@@ -6,7 +6,8 @@
       "path": "force-app",
       "default": true,
       "package": "agent-assist-experimental",
-      "versionDescription": ""
+      "versionDescription": "",
+      "postInstallScript": "PostInstallScript"
     }
   ],
   "name": "sf-package-dev-lab",
