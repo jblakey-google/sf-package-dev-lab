@@ -20,6 +20,7 @@ org-open: ## Open the default org in a browser
 
 org-scratch-create: ## Create a new scratch org
 	sf org scratch create -f config/project-scratch-def.json --set-default --alias scratch
+	sf apex run -f scripts/apex/modifyAppMenu.apex > /dev/null
 
 org-delete-scratch: ## Delete the scratch org
 	sf org delete scratch

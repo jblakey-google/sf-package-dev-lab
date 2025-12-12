@@ -9,9 +9,9 @@ global class PostInstallScript implements InstallHandler {
     global void onInstall(InstallContext context) {
         
         if (context.previousVersion() == null || context.isUpgrade()) {
-            createSupportQueue();
+            postInstallTasksPlaceHolder();
         }
     }
 
-    private void createSupportQueue() {}
+    private void postInstallTasksPlaceHolder() {}
 }
