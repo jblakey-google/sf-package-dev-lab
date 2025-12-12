@@ -1,10 +1,18 @@
 {
   "orgName": "Google",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+    "EnableSetPasswordInApi",
+    "LiveMessage",
+    "ServiceCloud",
+    "LiveAgent"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false

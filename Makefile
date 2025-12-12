@@ -19,7 +19,7 @@ org-open: ## Open the default org in a browser
 	sf org open
 
 org-scratch-create: ## Create a new scratch org
-	sf org scratch create --edition developer --set-default --alias scratch
+	sf org scratch create -f config/project-scratch-def.json --set-default --alias scratch
 
 org-delete-scratch: ## Delete the scratch org
 	sf org delete scratch
