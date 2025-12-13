@@ -10,3 +10,11 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Unsupported Metadata in 2GP
+# These will cause build failures if included in the package
+**/*.queueRoutingConfig-meta.xml
+**/*.messagingChannel-meta.xml
+**/*.servicePresenceStatus-meta.xml
+**/*.serviceChannel-meta.xml
+**/*.queue-meta.xml

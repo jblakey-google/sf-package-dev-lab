@@ -3,6 +3,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>setupAssistant</componentName>
+                <identifier>agent_assist_setupAssistant</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>cspTrustedSiteForm</componentName>
                 <identifier>c_cspTrustedSiteForm</identifier>
             </componentInstance>
@@ -31,7 +37,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>messageReceiver</componentName>
-                <identifier>c_messageReceiver2</identifier>
+                <identifier>c_messageReceiver</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
