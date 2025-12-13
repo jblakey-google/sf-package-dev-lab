@@ -100,12 +100,6 @@ public with sharing class SetupAssistantController {
         }
     }
 
-    // ... (All your other methods: deploySettings, deployQueueRoutingConfig, 
-    //      deployServiceChannel, deployServicePresenceStatus, deployPresencePermissionSet,
-    //      linkQueueToConfig, getSessionIdFromVF, sendMetadataRequest 
-    //      REMAIN EXACTLY THE SAME) ...
-    
-    // Just copy/paste those methods below here.
     private static void deploySettings(String sessionId) {
         String body = 
             '<met:updateMetadata xmlns:met="http://soap.sforce.com/2006/04/metadata">' +
