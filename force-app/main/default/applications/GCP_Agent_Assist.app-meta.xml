@@ -22,8 +22,13 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>GCP Agent Assist</label>
-    <navType>Standard</navType>
+    <navType>Console</navType>
     <tabs>standard-home</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>GCP_Agent_Assist_UtilityBar</utilityBar>
+    <workspaceConfig>
+        <mappings>
+            <tab>standard-home</tab>
+        </mappings>
+    </workspaceConfig>
 </CustomApplication>
