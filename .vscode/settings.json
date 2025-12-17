@@ -4,5 +4,7 @@
     "**/bower_components": true,
     "**/.sf": true,
     "**/.sfdx": true
-  }
+  },
+  "java.format.settings.url": "./.vscode/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle"
 }
