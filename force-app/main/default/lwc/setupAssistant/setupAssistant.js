@@ -29,6 +29,7 @@ export default class SetupAssistant extends LightningElement {
     @track isLoading = false;
     @track isSuccess = false;
     @track error;
+    siteName = '';
 
     /**
      * Resource information to display in the lightning table.
@@ -84,9 +85,8 @@ export default class SetupAssistant extends LightningElement {
             })
             .catch(error => {
                 this.error = error.body ? error.body.message : error.message;
-            })
-            .finally(() => {
+            }).finally(() =>{
                 this.isLoading = false;
-            });
+            })
     }
 }
