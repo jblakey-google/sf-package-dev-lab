@@ -18,25 +18,39 @@
                 </p>
             </template>
 
-            <p class="slds-m-bottom_small">
-                Click the button below to automatically configure the routing engine and permissions:
-            </p>
+            <template if:false={areAllResourcesDeployed}>
+                <p class="slds-m-bottom_small">
+                    Click the button below to automatically configure the routing engine and permissions:
+                </p>
+    
+                <ul class="slds-list_dotted slds-m-bottom_medium slds-m-left_medium">
+                    <li><strong>Enable Features:</strong> Activates Messaging and Service Cloud Voice settings.</li>
+                    <li><strong>Service Channels:</strong> Configures channels for Messaging and Voice.</li>
+                    <li><strong>Routing Engine:</strong> Creates the "Agent Assist" Queue and Routing Configuration.</li>
+                    <li><strong>Presence Statuses:</strong> Creates "Busy" and "Online (Messaging)" statuses.</li>
+                    <li><strong>Permissions:</strong> Generates the "Agent Assist Messaging" Permission Set.</li>
+                    <li><strong>User Access:</strong> Automatically assigns the permission set to <strong>you</strong>.</li>
+                </ul>
+            </template>
 
-            <ul class="slds-list_dotted slds-m-bottom_medium slds-m-left_medium">
-                <li><strong>Enable Features:</strong> Activates Messaging and Service Cloud Voice settings.</li>
-                <li><strong>Service Channels:</strong> Configures channels for Messaging and Voice.</li>
-                <li><strong>Routing Engine:</strong> Creates the "Agent Assist" Queue and Routing Configuration.</li>
-                <li><strong>Presence Statuses:</strong> Creates "Busy" and "Online (Messaging)" statuses.</li>
-                <li><strong>Permissions:</strong> Generates the "Agent Assist Messaging" Permission Set.</li>
-                <li><strong>User Access:</strong> Automatically assigns the permission set to <strong>you</strong>.</li>
-            </ul>
+            <template if:true={tableData}>
+                <div class="slds-m-bottom_medium">
+                    <lightning-datatable
+                        key-field="name"
+                        data={tableData}
+                        columns={tableCols}>
+                    </lightning-datatable>
+                </div>
+            </template>
 
-            <lightning-button 
-                variant="brand" 
-                label="Deploy Metadata Resources" 
-                onclick={handleDeploy}
-                disabled={isLoading}>
-            </lightning-button>
+            <template if:false={areAllResourcesDeployed}>
+                <lightning-button 
+                    variant="brand" 
+                    label="Deploy Metadata Resources" 
+                    onclick={handleDeploy}
+                    disabled={isLoading}>
+                </lightning-button>
+            </template>
 
             <template lwc:if={isLoading}>
                 <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
