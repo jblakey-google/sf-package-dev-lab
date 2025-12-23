@@ -69,6 +69,10 @@ export default class SetupAssistant extends LightningElement {
         }
     }
 
+    get resourcesAreNotDeployed () {
+        return !this.areAllResourcesDeployed;
+    }
+
     handleDeploy() {
         this.isLoading = true;
         this.error = null;

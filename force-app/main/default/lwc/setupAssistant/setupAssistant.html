@@ -18,7 +18,7 @@
                 </p>
             </template>
 
-            <template if:false={areAllResourcesDeployed}>
+            <template lwc:if={resourcesAreNotDeployed}>
                 <p class="slds-m-bottom_small">
                     Click the button below to automatically configure the routing engine and permissions:
                 </p>
@@ -33,7 +33,7 @@
                 </ul>
             </template>
 
-            <template if:true={tableData}>
+            <template lwc:if={tableData}>
                 <div class="slds-m-bottom_medium">
                     <lightning-datatable
                         key-field="name"
@@ -43,7 +43,7 @@
                 </div>
             </template>
 
-            <template if:false={areAllResourcesDeployed}>
+            <template lwc:if={resourcesAreNotDeployed}>
                 <lightning-button 
                     variant="brand" 
                     label="Deploy Metadata Resources" 
